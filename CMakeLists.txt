@@ -103,6 +103,7 @@ if (WITH_LUA)
     set(HAVE_LUA 1)
 endif()
 
+set(Boost_NO_BOOST_CMAKE ON)
 find_package(Boost 1.50 REQUIRED COMPONENTS system filesystem)
 include_directories(SYSTEM ${Boost_INCLUDE_DIR})
 
