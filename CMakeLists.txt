@@ -138,7 +138,7 @@ endif()
 
 message(STATUS "Libraries used to build: ${LIBS}")
 
-set(CMAKE_OSX_SYSROOT /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk)
+set (CMAKE_CXX_FLAGS "-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk")
 
 #############################################################
 # Build the library and executable file

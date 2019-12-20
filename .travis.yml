@@ -130,6 +130,7 @@ matrix:
 
 before_install:
   - dpkg -l | grep -E 'lua|proj|bz2|postgresql|postgis|zlib|boost|expat'  # checking available versions
+  - xcodebuild -sdk -version
 
 before_script:
   - psql -U postgres -c "SELECT version()"
