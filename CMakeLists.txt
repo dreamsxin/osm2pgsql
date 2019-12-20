@@ -136,8 +136,6 @@ if (WIN32)
     endif()
 endif()
 
-set(CMAKE_OSX_SYSROOT /Applications/Xcode-9.4.1.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/)
-
 message(STATUS "Libraries used to build: ${LIBS}")
 
 #############################################################
