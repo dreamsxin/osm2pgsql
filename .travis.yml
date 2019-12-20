@@ -89,6 +89,7 @@ matrix:
 
   # ---- OSX + CLANG ---------------------------
     - os: osx
+      osx_image: xcode11.3
       compiler: clang
       env: T="osx_clang_NoDB"
            BUILD_TYPE="Debug" LUAJIT_OPTION="OFF" TEST_NODB=1
@@ -143,7 +144,7 @@ before_script:
 
 script:
   - mkdir build && cd build
-  - cmake .. -DBUILD_TESTS=ON -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_STANDARD=${CPPVERSION} -DWITH_LUAJIT=${LUAJIT_OPTION} -DCMAKE_OSX_SYSROOT=macosx10.13
+  - cmake .. -DBUILD_TESTS=ON -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -DCMAKE_CXX_STANDARD=${CPPVERSION} -DWITH_LUAJIT=${LUAJIT_OPTION} -DCMAKE_OSX_SYSROOT=macosx10.15
   - make -j2 VERBOSE=1
   - echo "Running tests ... "
   - if [[ $TEST_NODB ]]; then
