@@ -100,6 +100,7 @@ matrix:
         - proj | head -n1
         - lua -v
         - xcodebuild -sdk -version
+        - ls /Applications/Xcode-11.3.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk
 
   # ---- Linux + GCC ---------------------------
     - os: linux
