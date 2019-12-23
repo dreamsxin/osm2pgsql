@@ -90,10 +90,11 @@ matrix:
   # ---- OSX + CLANG ---------------------------
     - os: osx
       osx_image: xcode11.3
-      compiler: clang
+      compiler: xcode11-clang-release
       env: T="osx_clang_NoDB"
            BUILD_TYPE="Debug" LUAJIT_OPTION="OFF" TEST_NODB=1
            CXXFLAGS="-pedantic -Wextra -Werror" CPPVERSION=14
+           CC='clang' CXX='clang++'
       before_install:
         - brew install lua; brew install lua
       before_script:
